@@ -39,6 +39,9 @@ module.exports = {
       'js': 'never',
       'vue': 'never'
     }],
+    'import/no-extraneous-dependencies': ['error', {
+      'optionalDependencies': ['test/unit/index.js']
+    }],
     {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
